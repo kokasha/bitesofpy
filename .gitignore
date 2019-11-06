@@ -1,1 +1,6 @@
-.pybites/
+/.pybites/
+*.zip
+.DS_Store
+/**/__pychace__/
+.vscode/
+
