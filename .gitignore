@@ -1,6 +1,6 @@
 /.pybites/
 *.zip
 .DS_Store
-/**/__pychace__/
+/**/__pycache__/
 .vscode/
 
