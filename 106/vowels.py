@@ -41,7 +41,7 @@ def strip_vowels(text: str) -> (str, int):
     text = text.strip()
     new_text = []
     counter = 0
-    for chr in text[:659]:
+    for chr in text:
       # print(index,chr,text[index],end=',')
       if chr.lower() in vowels:
          counter += 1
