@@ -5,4 +5,13 @@ def divide_numbers(numerator, denominator):
        ValueError reraise it. Following do the division and return the result.
        However if denominator is 0 catch the corresponding exception Python
        throws (cannot divide by 0), and return 0"""
-    pass
+    try:
+      num,den = int(numerator),int(denominator)
+    except KeyError:
+       raise KeyError
+    try:
+       return (num / den)
+    except ZeroDivisionError:
+         return 0
+
+# divide_numbers(2,0)
