@@ -41,11 +41,9 @@ def get_users_for_shell(passwd_output: str = PASSWD_OUTPUT,
        Return a list of users.
     """
     result = []
-    grep_shell = 'bin/' + grep_shell
-    passwd_lines = passwd_output.split('\n')
-    for line in passwd_lines:
-       user_shell = line.split(':')[-1]
-       if grep_shell in user_shell:
-          result.append(line.split(':')[0])
+    for line in passwd_output.splitlines():
+       username,*_,user_shell = line.split(':')
+       if grep_shell == user_shell.split('/')[-1]:
+          result.append(username)
     return sorted(result)
-   
+
